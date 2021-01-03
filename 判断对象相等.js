@@ -1,0 +1,3 @@
+Object.is(NaN,NaN);
+==
+===
