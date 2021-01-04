@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>标题</title>
+    </head>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+        }
+
+    </style>
+    <body>
+        <div id="box">
+            <button class="btn">按钮</button>
+            <span id="span">
+                <a href="#">来一下</a>
+            </span>
+            <p class="ll">新段落</p>
+            <div>
+                是的范德萨发萨芬
+            </div>
+        </div>
+
+        <script>
+            window.onload=function(ev){
+                console.log("开始获取元素");
+                var a=document.getElementsByTagName('a')[0];
+                console.log("a节点",a)
+                console.log("a节点  父节点",a.parentNode)
+                console.log("a节点  父节点的 父节点 ",a.parentNode.parentNode)
+                
+                var span = document.getElementsByTagName('span')
+                console.log("span节点  ",span)
+
+                var nextNode=span.nextElementSibling ||span.nextSibling
+                console.log("span节点  ",nextNode)
+
+
+                var box = document.getElementById("box");
+                var allNodeList=box.childNodes;
+
+                console.log("遍历allNodeList 所有节点：",allNodeList);
+
+                var newList=[];
+                allNodeList.forEach((values,key,index) => {
+                    
+                    console.log("nodeType",values.nodeType,values);
+
+                    if(values.nodeType==1){
+                        console.log("values",values);
+                        newList.push(values);
+                    }
+                });
+
+                newList.forEach((values,key,index)=>{
+                    console.log('value-----',values)
+                })
+                
+            }
+        </script>
+    
+    </body>
+</html>

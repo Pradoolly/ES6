@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>标题</title>
+    </head>
+    <style>
+        #box{
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+        }
+
+    </style>
+    <body>
+        <div class="box">
+            <button id="btn">按钮</button>
+            <p id="ll">标题</p>
+        </div>
+        <script>
+            window.onload = function(env){
+                //节点操作  CRUD
+                var box = document.getElementsByClassName("box")[0]
+                console.log(box);
+                var img=document.createElement("img")
+                img.src='./img/01.jpg'
+
+                //追加节点
+                // box.append(img)
+
+                var btn=document.getElementsByTagName('button')[0]
+                
+                //插入节点 (元素，标签)
+                box.insertBefore(img,btn)
+                //删除节点
+                // box.removeChild(img)
+                // btn.remove()
+
+
+                //克隆标签
+                var newBox = box.cloneNode()//浅克隆
+                var newBox2 = box.cloneNode(true)//深克隆
+
+                document.body.appendChild(newBox)
+                
+
+                //获取标签属性
+                console.log("获取标签属性:",btn.getAttribute.length)
+                
+                //设置标签属性
+                img.setAttribute('src','./img/02.png')
+
+                //删除属性
+                img.removeAttribute('src','./img/02.png')
+
+
+
+            }
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

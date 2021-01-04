@@ -1,0 +1,147 @@
+<head>
+    <body>
+        <script>
+            /*
+            *   String 所有字符串方法 都会返回一个新的字符串
+            *
+            */
+
+            /*
+            *   获取字符串的个数
+            */
+
+           /*
+            *   获取指定位置字符的ASCII码
+            *   charCodeAt()
+            */
+
+            /*
+            *   拼接字符
+            *   concat()
+            */
+
+
+            /*
+            *   截取
+            *   slice()
+            */
+
+
+            /*
+            *   截取
+            *   subString()
+            */
+
+            /*
+            *   截取
+            *   subStr()
+            */
+
+            /*
+            *   指定内容的位置
+            *   indexOf()
+            */
+
+
+            /*
+            *   lastIndexOf()
+            *   
+            */
+
+
+            /*
+            *   大写转换
+            *   toUpperCase()
+            */
+
+            /*
+            *   小写转换
+            *   toLowerCase()
+            */
+
+            /*
+            *   
+            *   search()
+            */
+
+
+            /*
+            *   
+            *   split()
+            */
+
+            /*
+            *   字符参数转obj
+            *   
+            */
+             var URL='https://www.afromz.com/user?name=lan&pwd=lan&age=20'
+             function getUrlParams(url){
+                 var index = url.indexOf('?')
+                 var params=url.substr(index)
+                 var paramsArray=params.split('&')
+                 var obj={}
+                 paramsArray.forEach(function(value,index,array){
+                     var tempArray=value.split('=')
+                     var key=tempArray[0];
+                     obj[key]=tempArray[1]
+
+                 });
+                 return obj;
+             }
+
+            var obj= getUrlParams(URL)
+             console.log(obj)
+
+
+            /*
+            *   去除空白
+            *   strm()
+            */
+
+            /*
+            *   去除空白
+            *   strm()
+            */
+
+            /*
+            *   去除空白
+            *   strm()
+            */
+
+
+            /*
+            *   去除空白
+            *   strm()
+            */
+
+            /*
+            *   去除空白
+            *   strm()
+            */
+
+
+             /*
+            *   String 所有字符串方法 都会返回一个新的字符串
+            *
+            */
+
+
+             /*
+            *   String 所有字符串方法 都会返回一个新的字符串
+            *
+            */
+
+             /*
+            *   String 所有字符串方法 都会返回一个新的字符串
+            *
+            */
+
+             /*
+            *   String 所有字符串方法 都会返回一个新的字符串
+            *
+            */
+
+
+        </script>
+    </body>
+</head>

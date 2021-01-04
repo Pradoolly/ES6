@@ -1,0 +1,164 @@
+<head>
+    <body>
+        <script>
+            /*
+            *   数组的高级用法
+            *
+            */
+            //1.是否是一个数组
+            var array1=['张三','李四']
+            console.log(array1 instanceof Array);
+            console.log(array1 instanceof Object);
+            console.log(array1 instanceof Number);
+            console.log(array1 instanceof String);
+            console.log(array1 instanceof Function);
+
+            console.log(Array.isArray(array1));
+            console.log(Array.isArray(Object));
+
+            //2.toString() 把数组转换成字符串，都好分割每一项
+            //   valueOf() 返回数组对象本身
+            console.log("toString()----",array1.toString())
+            console.log("toString()----",array1.valueOf()==array1)
+
+            //3.join(separator) 增加分割符
+            var str1= array1.join('----')
+            console.log('join 分隔符：',str1)
+
+            //4.push 接受任意数量的参数，并逐一加到数组末尾，并返回修改后数组的长度
+            var str1= array1.join('----')
+            console.log('join 分隔符：',str1)
+
+            //5.pop 数组末尾移除最后一项，减少数组length
+            var str1= array1.join('----')
+            console.log('join 分隔符：',str1)
+
+            //6.shift 删除原数组第一项，并返回删除元素的值，如果数组为空，则返回undefined
+            var str1= array1.join('----')
+            console.log('join 分隔符：',str1)
+
+            //7.unshift 将参数添加到原数组开头，并返回数组的长度
+            var str1= array1.join('----')
+            console.log('join 分隔符：',str1)
+
+            //8.reverse 数组反转
+            var str1= array1.join('----')
+            console.log('join 分隔符：',str1)
+
+            //9.concat 将参数添加到数组，这个方法先copy一个当前数组，然后将接收到的参数添加到这个copy数组的末尾，返回新构建的数组，
+            //          在没有给concat()传递参数的情况下，它只复制当前数组并返回
+            var str1= array1.join('----')
+            console.log('join 分隔符：',str1)
+
+            //10.indexOf() 寻找元素位置
+            var str1= array1.join('----')
+            console.log('join 分隔符：',str1)
+
+            //11.forEach
+            var array11=['张三','李四']
+            array11.forEach(function(value,index,array){
+
+            })
+            
+
+
+            //12.sort
+            var array12= ['100','50','20','2','44']
+            function sortNumber(a,b){
+                return a-b;  //>0,=0 <0
+            }
+
+
+            console.log('sort 排序：',array12.sort(sortNumber))
+
+            //13.map
+            //  [].map() array.map(callback,[this.Object])
+            //  但是callback需要有返回值，如果没有 就返回undefined
+            var array13= ['100','50','20','2','44']
+            var array133= array13.map(function(value,index,array){
+                return value*2
+            })
+            console.log('map：',array133)
+
+
+
+            //14.filter
+            // 分割(筛选) callback在这里是过滤器，当元素符合条件，过滤器就返回 true，而filter则会返回所有符合过滤条件的元素
+            var array14= ['100','50','20','2','44']
+            var array144= array13.filter(function(value,index,array){
+                return value%2===0
+            })
+            console.log('map：',array144)
+
+            //15.every
+            var array15= ['100','50','20','2','44']
+            var array155= array15.every(function(value,index){
+                return value>4
+            })
+            console.log('map：',array155)
+
+            //16.some
+            var array16= ['100','50','20','2','44']
+            var array166= array16.some(function(value,index){
+                return value>4
+            })
+            console.log('map：',array166) 
+
+
+            //17.Math
+            /*
+            *   Math.PI 圆周率
+            *   Math.random() 随机数
+            *   Math.floor()乡下取整
+            *   Math.ceil() 向上取整
+            *   Math.round() 四舍五入
+            *   Math.abs()  取绝对值
+            *   Math.max()  取最大值
+            *   Math.min()  取最小值
+            *   Math.sin()  取正弦
+            *   Math.power() 求幂次
+            *   Math.sqrt()  求平方根
+            * 
+            * 
+            */
+            var str1= array1.join('----')
+            console.log('join 分隔符：',str1)
+
+            //3.join(separator) 增加分割符
+            var str1= array1.join('----')
+            console.log('join 分隔符：',str1)
+
+            //3.join(separator) 增加分割符
+            var str1= array1.join('----')
+            console.log('join 分隔符：',str1)
+
+            //3.join(separator) 增加分割符
+            var str1= array1.join('----')
+            console.log('join 分隔符：',str1)
+
+            //3.join(separator) 增加分割符
+            var str1= array1.join('----')
+            console.log('join 分隔符：',str1)
+
+            //3.join(separator) 增加分割符
+            var str1= array1.join('----')
+            console.log('join 分隔符：',str1)
+
+            //3.join(separator) 增加分割符
+            var str1= array1.join('----')
+            console.log('join 分隔符：',str1)
+
+            //3.join(separator) 增加分割符
+            var str1= array1.join('----')
+            console.log('join 分隔符：',str1)
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</head>

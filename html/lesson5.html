@@ -1,0 +1,52 @@
+<head>
+    <body>
+        <script>
+
+        /*
+         *  作用域
+         */
+
+
+            var str1='我是个变量'
+            if(str1 !='历史'){
+                var str1='历史'
+            }
+
+            console.log(str1)
+
+
+            for(var i=0;i<10;i++){
+
+            }
+
+            console.log("i= ",i)
+        
+        console.log("复杂作用域")
+        var anotherColor="yellow"
+        function getColor(){
+            
+            function swapColor(){
+                var tempColor='red'
+                color=anotherColor;
+                anotherColor=tempColor;
+            }
+            swapColor()
+        }
+
+        getColor()
+        
+        console.log(color)
+
+
+
+
+
+
+
+
+
+
+        </script>
+
+    </body>
+</head>

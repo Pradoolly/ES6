@@ -1,0 +1,179 @@
+<head>
+    <body>
+        <script>
+            
+            /*
+             *  变量的默认值 //undefined
+             * 
+             */
+             
+             var name;
+             console.log(name)
+
+             /*
+             *  不使用中间变量，交换两个数
+             * 
+             */
+
+            var num1=6,num2=8
+            var temp;
+            temp=num1;
+            num1=num2;
+            num2=temp;
+
+            console.log(num1,num2)
+
+
+            num1=num1+num2;
+            num2=num1-num2;
+            num1=num1-num2;
+
+            console.log(num1,num2)
+
+            /*
+             *  变量类型
+             *  基本类型：Number String Boolean Undefinded Null
+             *  引用类型：Object
+             */
+
+             console.log("js中最大值",Number.MAX_VALUE)
+             console.log("js中最小值",Number.MIN_VALUE)
+
+            console.log("最小值类型：",typeof -Infinity)
+
+
+
+            /*
+             *  变量类型
+             *  NaN  浮点数运算 可能得到一个不精确的结果
+             */
+
+             var num=NaN;
+             console.log(typeof num)
+
+             var num3=100.9+200.1
+             console.log(num3)
+
+            /*
+             *  变量类型
+             *  Boolean  
+             *  1.任何非零数值都是true,包括正负无穷大，只用0和NaN是false
+             *  2.非零空串都是true，只用空字符串是false
+             *  3.任何对象都是true，只用null和undefined是false
+             * 
+             */
+
+            var bool1=Boolean(1)
+            console.log("bool1",bool1)
+
+            var bool2=Boolean(0)
+            console.log("bool2",bool2)
+
+            var bool3=Boolean(-3)
+            console.log("bool3",bool3)
+
+            var bool4=Boolean("hello")
+            console.log("bool4",bool4)
+
+            var bool5=Boolean("  ")
+            console.log("bool5",bool5)
+
+            var bool6=Boolean(undefined)
+            console.log("bool6",bool6)
+
+            var bool7=Boolean(null)
+            console.log("bool7",bool7)
+
+
+
+
+            /*
+             *  变量类型
+             *  undefined  :表示变量未赋值，这种类型只有一种值，就是undefined
+             * 
+             *  undefined是Undefined类型的字面量
+             *  Null 类型也是只有一个数据类型，这个特殊的值就是null
+             *  
+             *  undefined值实际上就是null值衍生出来的，所以如果比较undefined和null是否相等，会返回true
+             * 
+             */
+
+             var str1 = null 
+             console.log(typeof str1)
+             var str2=undefined
+
+             console.log(str1==str2)
+             console.log(str2===str1)//既做值比较，又做类型比较
+
+            /*
+             *  变量类型
+             *  toString()
+             *  该方法不会影响原来的变量，它会将转换的结果返回
+             *  数值类型调用toString()，可以携带一个参数，输出对应进制的值
+             *  null和undefined没有toString()方法
+             *  
+             *  有些值没有toString方法，可以使用String()方法强转 如：null undefined
+             *  + 拼接字符串
+             */
+
+             var num5=123;
+             var res1=num5.toString();
+             console.log(res1)
+             console.log(typeof res1) 
+
+             var num6=false;
+             var res2=num6.toString()
+             console.log(typeof res2)
+
+            var s1='12306'
+            var r1=+s1;
+            console.log(r1)
+            console.log(typeof r1)
+
+
+
+
+             /*
+             *  变量类型
+             *  parseInt() parseFloat() 可以提取字符串中的有效整数和浮点数
+             *      从第一个有效数字开始，知道无效数字
+             *      如果第一位不是有效数字，则直接返回NaN
+             *  Number()函数中无论字符串中是否存在有效整数，都会直接返回NaN
+             * 
+             * 
+             * 
+             */
+             console.log("========================") 
+             var num7='123res';
+             var res3=parseInt(num7)
+             console.log(res3)
+             console.log(typeof res3) 
+
+             var num8='123res123';
+             var res4=parseInt(num8)
+             console.log(res4)
+             console.log(typeof res4) 
+
+             var num9='er123res';
+             var res5=parseInt(num9)
+             console.log(res5)
+             console.log(typeof res5) 
+
+             var num10='  ';
+             var res6=parseInt(num10)
+             console.log(res6)
+             console.log(typeof res6) 
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</head>

@@ -1,0 +1,120 @@
+<head>
+    <body>
+        <script>
+
+            /*
+             *  js对象
+             *  1.new先在内存中创建一个新的对象
+             *  2.new会让this指向这个新的对象
+             *  3.执行构造函数，给这个新对象添加属性和方法
+             *  4.返回这个新对象
+             */
+
+            //创建对象：对象字面量
+            var obj = {
+                name:'方舟',
+                age:23,
+                write:function(){
+                    console.log("我会写字！")
+                }
+            }
+
+            console.log(obj)
+
+            //创建对象：new Object
+            var obj2=new Object()
+                obj2.name='信使'
+            console.log(obj2)
+
+            //创建对象：工厂方法创建
+            function createObj(name,age){
+                var obj3=new Object();
+                obj3.name=name;
+                obj3.age=age;
+                obj3.print=function(){
+                    console.log('姓名是：',name+' 年龄是：',age);
+                }
+
+                return obj3;
+            }
+
+
+            var obj4=createObj("天使",29)
+            console.log(obj4)
+            obj4.print()
+
+
+
+
+
+            //创建对象：自定义构造函数
+            function Person(name,age,sex){
+                this.name=name;
+                this.age=age;
+                this.sex=sex;
+            }
+
+            var obj5=new Person('新构造',29,'男')
+            var obj6=new Person('新构造2',29,'女')
+            console.log(obj5,obj6)
+            console.log(obj5===obj6)
+
+            /*
+             *  this
+             *  1.普通函数执行，内部的this指向全局的window
+             *  2.函数在定义的时候，this是不确定的，只有在调用的时候才可以确定
+             *  3.如果函数做为一个对象函数，该对象被调用的时候，那么函数内的this则指向该对象
+             *  4.构造函数中的this，是一个隐式对象，所有方法和属性都挂在到了这个隐式对象上了，后续通过new来调用，从而实现了实例化
+             */
+             console.log("-------------------------")
+             var str1='张三'
+             function Fn(){
+                 this.name='李四'
+                 console.log(this)
+                 console.log(this.str1)
+                 console.log(this.name)
+                }
+
+                Fn()
+             console.log("-------------------------")
+             new Fn()
+
+             console.log("-------属性遍历------------------")
+
+            var obj7={
+                price:"33.4",
+                sku:"12寸，黑色",
+                sell:function(){
+                    console.log("这个库存不够")
+                }
+            }
+            
+            for(var key in obj7){
+                console.log(key)
+                console.log(key+': '+obj7[key])
+            }
+
+            delete obj7.price
+            obj7.sku='19寸 白色'
+            obj.time='2020-12-12 '
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</head>

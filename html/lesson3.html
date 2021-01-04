@@ -1,0 +1,76 @@
+<head>
+    <body>
+        <script>
+            var num=100;
+            while(num<300){
+                num++;
+                console.log("num= ",num)
+            }
+
+            for(var n=0;n<100;n++){
+                console.log("for: n= ",n)
+            }
+
+            /*
+             *  数组 array
+             *
+             * 
+             * 
+             */
+            var array1=['a','b','c']
+            for(var n=0;n<array1.length;n++){
+                console.log("遍历数组 array1",array1[n])
+            }
+
+            var array2=new Array(30)
+            for(var n=0;n<30;n++){
+                array2.push(n*n)
+                // console.log("遍历数组 array2",array2[n])
+
+            }
+
+            for(var n=0;n<array2.length;n++){
+                console.log("遍历数组 array2",array2[n])
+            }
+
+
+
+            var array3=new Array('a','b','c')
+            for(var n=0;n<array3.length;n++){
+                console.log("遍历数组 array3",array3[n])
+            }
+
+            /*
+             *  数组 array
+             *
+             *  使用下标获取数组中的元素[index]
+             *  如果取不到，则返回undefined
+             * 
+             */
+            
+             var array4= new Array('a','b')
+             console.log(array4[2])
+
+             var array5=[];
+             array5[2]='c'
+             array5[3]='d'
+
+
+             var array6=[0,'a',0,'b',0]
+             var newArray6=[];
+             for(var i=0 ;i<array6.length;i++){
+                 if (array6[i]!==0) {
+                     newArray6[newArray6.length]=array6[i]
+                 }
+             }
+             console.log(newArray6)
+
+
+
+
+
+
+
+        </script>
+    </body>
+</head>

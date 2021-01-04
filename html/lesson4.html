@@ -1,0 +1,87 @@
+<head>
+    <body>
+        <script>
+
+        function sumFunction(conut){
+            var sum=0;
+            for(var i=0;i<conut;i++){
+                sum+=i;
+            }
+            console.log("----------",sum)
+        } 
+
+        sumFunction(100);
+
+        /*
+         *  函数声明方式
+         * 
+         */
+        function sumFun(a,b){
+            console.log(a+b)
+        }
+
+        /*
+         *  函数表达式声明方式
+         * 
+         */
+        var sF= function sumFun(a,b){
+            console.log(a+b)
+
+            console.log("函数参数--------")
+
+            console.log("sumFun  参数",sumFun.length)
+            console.log("arguments  参数",arguments.length)
+            console.log(arguments.length===sumFun.length)
+
+            console.log(arguments.callee)
+        }
+
+        sF(1,2,100,200);
+
+        /*
+         *  匿名函数
+         * 
+         */
+
+        // document.onclick=function(){
+        //     alert(1)
+        // }
+
+        // setInterval(function(){
+        //     console.log("匿名函数------setInterval")
+        // },1000)
+
+        
+        (function(){
+            console.log("匿名函数------闭包")
+        })()
+
+
+        /*
+         *  回调函数
+         *  如果你把函数指针作为参数传递给 另一个函数，当这个指针被用来调用其所指向的函数时，这就是回调函数
+         */
+        
+        function add(n,m){
+            return n+m
+        }
+        function call(n,m,func){
+            return func(n,m)
+        }
+
+        var res= call(1,2,add)
+        console.log('res-------',res)
+
+
+        
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</head>

@@ -1,0 +1,99 @@
+<head>
+    <body>
+        <script>
+            /*
+            *
+            *   window 
+            *   1.所有浏览器都支持window对象，
+            *   2.所有js全局对象，函数，变量都能自动的成为window对象的成员
+            *   3.全局变量是window的属性，全局函数时window对象的方法
+            *   
+            * 
+            *   document：
+            *   1.是window对象的属性之一
+            *   2.document对象是documentHTML的一个实例
+            *   3.作为全局对象来被访问
+            *       
+            *       childNodes
+            *       head
+            *       body
+            *       title
+            *       
+            *   事件
+            *      1.要素
+            *           1.事件源
+            *           2.事件名称
+            *           3.事件处理function
+            *       2. var btn=documnet.getElementById('')
+            *          btn.onclick=function(event){
+            *               alert('弹出事件...')
+            *           }
+            * 
+            * 
+            * 
+            *      onload事件
+            *       1.onload事件会在整个页面加载完成后才出发
+            *       2.为window绑定一个onload事件，该事件对应的函数响应会在页面加载
+            *         完成后执行
+            *       3.一般将scrip标签放在body的尾部
+            *
+                    window.onload=function(ev){
+                        var btn=document.getElementById('btn')
+                            btn.onclick=function(ev){
+                                alert("可以点我了...")
+                            }
+                        }
+            * 
+            * 
+            * 
+            * 
+            *  
+            */
+
+        window.onload=function(ev){
+            var btn=document.getElementById('btn')
+                btn.onclick=function(ev){
+                    alert("可以点我了...")
+                }
+        }
+            
+
+            /*
+            *   1.根据id获取元素
+            *   
+            */
+            var div= document.getElementById('box')
+            /*
+            *   2.根据元素标签获取元素
+            *   
+            */
+            var div= document.getElementsByClassName('btn')
+            /*
+            *   3.根据标签名获取元素
+            *   
+            */
+            var div= document.getElementsByName('box')
+            /*
+            *   4.根据id获取元素
+            *   
+            */
+            var div= document.getElementsByTagName('box')
+            /*
+            *   5.使用选择器获取元素
+            *   
+            */
+            var div= document.querySelector('btn')
+            
+            
+
+
+
+
+
+
+
+
+                
+        </script>
+    </body>
+</head>
